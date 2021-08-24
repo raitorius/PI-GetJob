@@ -2,7 +2,7 @@
 // include_once(dirname(__FILE__)."/../layout/Mysql.php");
 
 
-
+ 
 // if (isset($_POST['cadastro'])) {
 //     $nome = $_POST['nome'];
 //     $email = $_POST['email'];

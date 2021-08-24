@@ -1,0 +1,28 @@
+@import "app.css";
+@import "cadStyle.css";
+@import "form.css";
+@import "layout.css";
+@import "style_user.css";
+
+a{
+ font-family: 'Courier New';
+}
+a:hover{
+  background-color: gray;
+  text-decoration: none;
+}
+
+.email {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  padding: 10px;
+  height: 120px;
+}
+
+.senha {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  padding: 10px;
+}

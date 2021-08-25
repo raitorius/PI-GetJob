@@ -1,6 +1,6 @@
 <?php
 
-include_once(dirname(__FILE__)."/../layout/Mysql.php");
+include_once(dirname(__FILE__)."/inc/MySQL.php");
 
 
 
@@ -16,7 +16,7 @@ if (isset($_POST['cadastro'])) {
     if ($sql->execute(array($nome, $email, $formacao, $telefone, $descricao, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('location:/login.php');
+        header('<location:/login.php');
     } else {
         echo 'Dados não cadastrados!';
     }
@@ -38,8 +38,9 @@ if (isset($_POST['cadastro'])) {
 </head>
 
 <body>
+<form action="" method="POST">
     <main class="container">
-        <form>
+      
             <fieldset>
                 <h1>Cadastro de Funcionário</h1>
                 <br>

@@ -1,5 +1,5 @@
 <?php
-/*include_once(dirname(__FILE__)."/../layout/Mysql.php");
+include_once(dirname(__FILE__)."/../layout/Mysql.php");
 
 
 
@@ -29,7 +29,7 @@ if (isset($_POST['cadastro'])) {
     } else {
         echo 'Dados não cadastrados!';
     }
-}*/
+}
 ?>
 
 

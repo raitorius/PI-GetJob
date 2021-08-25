@@ -20,8 +20,8 @@
                 <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><a href=" cad_funcionarios/cadfunc.php">Cadastro </a> </li>
                 <div class="dropdown-menu">
                   <ul>
-                    <li> <a href="cadastro.php">Funcionário</a></li>
-                    <li><a href="cadus.php">Usuário</a></li>
+                    <li> <a href="cadfuncionario.php">Funcionário</a></li>
+                    <li><a href="cadusuario.php">Usuário</a></li>
                   </ul>
                 </div>
               </div>

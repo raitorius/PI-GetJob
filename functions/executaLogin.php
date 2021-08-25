@@ -8,7 +8,7 @@ $_SESSION['email'] = "";
 
 if (isset($_POST['enviar'])) {
   $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  $senha = md5($_POST['senha']);
   $sql = $pdo->prepare("SELECT * FROM usuarios 
                               WHERE email= ? AND senha = ?");
   if ($sql->execute(array($email, $senha))) {

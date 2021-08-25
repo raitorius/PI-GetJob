@@ -5,26 +5,22 @@ include_once(dirname(__FILE__)."/inc/MySQL.php");
 
 if (isset($_POST['cadastro'])) {
     $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
     $nascimento = $_POST['nascimento'];
     $rg = $_POST['rg'];
     $cpf = $_POST['cpf'];
     $rua = $_POST['rua'];
-    $numero_da_casa = $_POST['numero_da_casa'];
     $bairro = $_POST['bairro'];
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
     $cep = $_POST['cep'];
     $email = $_POST['email'];
-    $login = $_POST['login'];
     $senha = md5($_POST['senha']);
-    $confirme_senha = $_POST['confirme_senha'];
       //acentuação da erro 
-    $sql = $pdo->prepare("INSERT INTO usuarios (id,nome,sobrenome,nascimento,rg,cpf,rua,numero_da_casa,bairro,estado,cidade,cep,email,login,senha,confirme_senha) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    if ($sql->execute(array($nome, $sobrenome, $nascimento, $rg, $cpf, $rua, $numero_da_casa, $bairro, $estado, $cidade, $cep, $email, $login, $senha, $confirme_senha))) {
+    $sql = $pdo->prepare("INSERT INTO usuarios (id,nome,nascimento,rg,cpf,rua,bairro,estado,cidade,cep,email,senha) values (null,?,?,?,?,?,?,?,?,?,?,?)");
+    if ($sql->execute(array($nome, $nascimento, $rg, $cpf, $rua, $bairro, $estado, $cidade, $cep, $email, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('location:/login.php');
+       header('location:/GetJob-ProjetoIntegrador/login.php');
         //nao tá achando o login no header
     } else {
         echo 'Dados não cadastrados!';
@@ -33,20 +29,14 @@ if (isset($_POST['cadastro'])) {
 ?>
 
 
+<?php
 
-<!DOCTYPE html>
-<html lang="pt-br">
+include_once(dirname(__FILE__)."/inc/header.php");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro Usuário</title>
-    <link rel="stylesheet" href="fuction/style1.css">
-    <link rel="stylesheet" href="fuction/font.css">
-</head>
+include_once(dirname(__FILE__)."/inc/menu.php");
 
-<body>
+
+?>
     <main class="container">
     <form action="" method="POST">
             <fieldset>
@@ -55,17 +45,17 @@ if (isset($_POST['cadastro'])) {
                 <p class=" cor">Seus Dados</p>
                 <p class="cor">Todos os campos devem ser preenchidos</p>
                 <div class="input-field">
-                    <input type="text" name="name" id="nome" placeholder="NomeCompleto" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
                     <div class="efeito"></div>
                 </div>
                 <br>
                 <label class="cor">Data de nascimento</label>
                 <div>
-                    <input type="date" name="Datansc" id="nascimento" required>
+                    <input type="date" name="nascimento" id="nascimento" required>
                 </div>
                 <br>
                 <div class="input-field">
-                    <input type="text" name="rg" id="rg" placeholder="rg" maxlength="8" required>
+                    <input type="text" name="rg" id="rg" placeholder="RG" maxlength="8" required>
                     <div class="efeito"></div>
                 </div>
                 <br>
@@ -77,10 +67,6 @@ if (isset($_POST['cadastro'])) {
                 <div>
                     <div class="input-field">
                         <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
-                        <div class="efeito"></div>
-                    </div>
-                    <div class="input-field">
-                        <input type="number" name="number" id="numero_da_casa" placeholder="Número Casa" required>
                         <div class="efeito"></div>
                     </div>
                     <br>
@@ -123,7 +109,7 @@ if (isset($_POST['cadastro'])) {
                     <br>
                     <div>
                         <div class="input-field">
-                            <input type="text" name="cid" id="cidade" placeholder="Cidade" required>
+                            <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
                             <div class="efeito"></div>
                         </div>
                         <br>
@@ -140,13 +126,18 @@ if (isset($_POST['cadastro'])) {
                             <br>
                             <div>
                                 <div class="input-field">
-                                    <input type="password" name="senha" id="senha" placeholder="senha" required>
+                                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
                                     <div class="efeito"></div>
                                 </div>
-                                <input type="submit" value="Cadastrar Usuário">
+                                <input type="submit" name="cadastro" value="Cadastrar Usuário">
             </fieldset>
         </form>
     </main>
-</body>
+<?php
 
-</html>
+
+include_once(dirname(__FILE__)."/inc/footer.php");
+
+
+
+?>

@@ -10,43 +10,37 @@ if (isset($_POST['cadastro'])) {
     $formacao = $_POST['formacao'];
     $telefone = $_POST['telefone'];
     $descricao = $_POST['descricao'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
       //acentuação da erro 
     $sql = $pdo->prepare("INSERT INTO funcionario (id,nome,email,formacao,telefone,descricao,senha) values (null,?,?,?,?,?,?)");
     if ($sql->execute(array($nome, $email, $formacao, $telefone, $descricao, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('<location:/login.php');
+        header('location:/GetJob-ProjetoIntegrador/login.php');
     } else {
         echo 'Dados não cadastrados!';
     }
 }
 ?>
 
+<?php
+
+include_once(dirname(__FILE__)."/inc/header.php");
+
+include_once(dirname(__FILE__)."/inc/menu.php");
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CadFuncionário</title>
-    <link rel="stylesheet" href="fuction/style1.css">
-    <link rel="stylesheet" href="fuction/font.css">
-</head>
 
-<body>
-<form action="" method="POST">
     <main class="container">
-      
+      <form action="" method="POST">
             <fieldset>
                 <h1>Cadastro de Funcionário</h1>
                 <br>
                 <p>Dados Pessoais</p>
                 <div class="input-field">
-                    <input type="text" name="name" id="nome" placeholder="NomeCompleto" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
                     <div class="efeito"></div>
                 </div>
                 <br>
@@ -57,28 +51,28 @@ if (isset($_POST['cadastro'])) {
                 <br>
                 <div>
                     <label>Formação</label>
-                    <input type="radio" name="nive" id="formacao" value="fundamental" required>Fundamental
-                    <input type="radio" name="nive" id="formacao" value="médio" required>Ensino-Médio
-                    <input type="radio" name="nive" id="formacao" value="superior" required>Ensino-Superior
+                    <input type="radio" name="formacao" id="formacao" value="fundamental" required>Fundamental
+                    <input type="radio" name="formacao" id="formacao" value="médio" required>Ensino-Médio
+                    <input type="radio" name="formacao" id="formacao" value="superior" required>Ensino-Superior
                 </div>
                 <br>
                 <div class="input-field">
-                    <input type="text" name="tel" id="telefone" maxlength="10" required placeholder="Telefone">
+                    <input type="text" name="telefone" id="telefone" maxlength="10" required placeholder="Telefone">
                     <div class="efeito"></div>
                 </div>
                 <br>
                 <div>
-                    <textarea name="Descricao" id="descricao" cols="35" rows="10" placeholder="Descrição" maxlength="500"></textarea>
+                    <textarea name="descricao" id="descricao" cols="35" rows="10" placeholder="Descrição" maxlength="500"></textarea>
                 </div>
                 <br>
                 <div class="input-field">
-                    <input type="password" name="password" id="senha" placeholder="Senha" minlength="5" maxlength="15">
+                    <input type="password" name="senha" id="senha" placeholder="Senha" minlength="5" maxlength="15">
                     <div class="efeito"></div>
                 </div>
-                <input type="submit" value="Cadastrar Funcionário">
+                <input type="submit" name="cadastro" value="Cadastrar Funcionário">
             </fieldset>
         </form>
     </main>
-</body>
-
-</html>
+ <?php
+include_once(dirname(__FILE__)."/inc/footer.php");
+?>

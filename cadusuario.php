@@ -1,5 +1,5 @@
 <?php
-include_once(dirname(__FILE__)."/../layout/Mysql.php");
+include_once(dirname(__FILE__)."/inc/MySQL.php");
 
 
 
@@ -24,7 +24,7 @@ if (isset($_POST['cadastro'])) {
     if ($sql->execute(array($nome, $sobrenome, $nascimento, $rg, $cpf, $rua, $numero_da_casa, $bairro, $estado, $cidade, $cep, $email, $login, $senha, $confirme_senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('location:../layout/login.php');
+        header('location:/login.php');
         //nao tá achando o login no header
     } else {
         echo 'Dados não cadastrados!';
@@ -41,27 +41,27 @@ if (isset($_POST['cadastro'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cad Usuário</title>
+    <title>Cadastro Usuário</title>
     <link rel="stylesheet" href="fuction/style1.css">
     <link rel="stylesheet" href="fuction/font.css">
 </head>
 
 <body>
     <main class="container">
-        <form>
+    <form action="" method="POST">
             <fieldset>
                 <h1 class="cor">Cadastro de Usuário</h1>
                 <br>
                 <p class=" cor">Seus Dados</p>
                 <p class="cor">Todos os campos devem ser preenchidos</p>
                 <div class="input-field">
-                    <input type="text" name="name" id="name" placeholder="NomeCompleto" required>
+                    <input type="text" name="name" id="nome" placeholder="NomeCompleto" required>
                     <div class="efeito"></div>
                 </div>
                 <br>
                 <label class="cor">Data de nascimento</label>
                 <div>
-                    <input type="date" name="Datansc" id="datansc" required>
+                    <input type="date" name="Datansc" id="nascimento" required>
                 </div>
                 <br>
                 <div class="input-field">
@@ -80,7 +80,7 @@ if (isset($_POST['cadastro'])) {
                         <div class="efeito"></div>
                     </div>
                     <div class="input-field">
-                        <input type="number" name="number" id="number" placeholder="Número Casa" required>
+                        <input type="number" name="number" id="numero_da_casa" placeholder="Número Casa" required>
                         <div class="efeito"></div>
                     </div>
                     <br>
@@ -91,7 +91,7 @@ if (isset($_POST['cadastro'])) {
                     <br>
                     <div>
                         <!-- <input type="submit" name="est" id="est" placeholder="estado" required> -->
-                        <select name="estado" id="">
+                        <select name="estado" id="estado">
                             <option value="PR">Amapá</option>
                             <option value="PR">Alagoas</option>
                             <option value="PR">Acre</option>

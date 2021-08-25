@@ -17,7 +17,7 @@
               <div class="btn-group dropright">
 
 
-                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><a href=" cad_funcionarios/cadfunc.php">Cadastro </a> </li>
+                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false""><a href=" cadfuncionario.php">Cadastro </a> </li>
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="cadfuncionario.php">Funcionário</a></li>

@@ -77,3 +77,9 @@ echo $aviso;
 
 include_once(dirname(__FILE__) . "/inc/footer.php");
 ?>
+/*SELECT PRA LIGAR AS DUAS TABELAS DO BANCO NO MESMO LOGIN, MAS TEM QUE COLOCAR CHAVE ESTRANGEIRA
+NO ID PARA JUNTAR AS DUAS E NAO DAR INTERFERENCIA*/
+/* SELECT * FROM usuarios 
+ 
+left join funcionario on usuario.idfuncionario = funcionario.id 
+where email = ? and senha = ? */

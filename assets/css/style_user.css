@@ -1,4 +1,10 @@
 .bck{
-    background-color: gray;
-    border: 2px dashed green;
+    background-color: blue;
+    border: 2px solid black;
+}
+.sl1{
+    border: 3px solid green;
+}
+.c{
+    margin-top: 10em;
 }

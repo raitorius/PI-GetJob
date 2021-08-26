@@ -34,20 +34,20 @@ if (isset($_POST['cadastro'])) {
 
 function validaCPF($cpf) {
  
-   
+    // Extrai somente os números
     $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
      
-   
+    // Verifica se foi informado todos os digitos corretamente
     if (strlen($cpf) != 11) {
         return false;
     }
 
-   
+    // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
     if (preg_match('/(\d)\1{10}/', $cpf)) {
         return false;
     }
 
-    
+    // Faz o calculo para validar o CPF
     for ($t = 9; $t < 11; $t++) {
         for ($d = 0, $c = 0; $c < $t; $c++) {
             $d += $cpf[$c] * (($t + 1) - $c);
@@ -123,32 +123,32 @@ function validaCPF($cpf) {
                     <div>
                         <!-- <input type="submit" name="est" id="est" placeholder="estado" required> -->
                         <select name="estado" id="">
-                            <option value="AP">Amapá</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AC">Acre</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
+                            <option value="PR">Amapá</option>
+                            <option value="PR">Alagoas</option>
+                            <option value="PR">Acre</option>
+                            <option value="PR">Amazonas</option>
+                            <option value="PR">Bahia</option>
+                            <option value="PR">Ceará</option>
                             <option value="ES">Espirito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MS">Mato grosso do sul</option>
+                            <option value="PR">Goiás</option>
+                            <option value="PR">Minas Gerais</option>
+                            <option value="PR">Mato Grosso</option>
+                            <option value="PR">Maranhão</option>
+                            <option value="PR">Mato grosso do sul</option>
                             <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PA">Pará</option>
-                            <option value="PI">Piauí</option>
-                            <option value="PB">Paraíba</option>
+                            <option value="PR">Pernambuco</option>
+                            <option value="PR">Pará</option>
+                            <option value="PR">Piauí</option>
+                            <option value="PR">Paraíba</option>
                             <option value="RJ">Rio de Janeiro</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
+                            <option value="PR">Rio Grande do Sul</option>
+                            <option value="PR">Rio Grande do Norte</option>
+                            <option value="PR">Rondônia</option>
+                            <option value="PR">Roraima</option>
                             <option value="SC">Santa Catarina</option>
-                            <option value="SE">Sergipe</option>
+                            <option value="PR">Sergipe</option>
                             <option value="SP">São Paulo</option>
-                            <option value="TO">Tocantins</option>
+                            <option value="PR">Tocantins</option>
                         </select>
                     </div>
                     <br>

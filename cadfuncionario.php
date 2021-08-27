@@ -55,7 +55,7 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                 </div>
                 <br>
                 <div>
-                    <label>Formação</label>
+                   <h6 class="font2">Formação</h6>
                     <input type="radio" name="formacao" id="formacao" value="fundamental" required>Fundamental
                     <input type="radio" name="formacao" id="formacao" value="médio" required>Ensino-Médio
                     <input type="radio" name="formacao" id="formacao" value="superior" required>Ensino-Superior
@@ -69,8 +69,12 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                 <div>
                     <textarea name="descricao" id="descricao" cols="45" rows="8" placeholder="Descrição" maxlength="500"></textarea>
                 </div>
-                <label for="img">Imagem de Perfil:</label>
-            <input type="file" name="img" />
+                <div>
+                <label for="img">Imagem de Perfil</label>
+            <input  type="file" name="img" id="img" />
+            <br>
+            <p>Clique para selecionar uma imagem de perfil*</p>
+            </div>
                 <br>
                 <br>
                 <div class="input-field">

@@ -1,10 +1,18 @@
 .bck{
-    background-color: blue;
-    border: 2px solid black;
+    background-color:  slategrey;
 }
 .sl1{
-    border: 3px solid green;
+    border: 2px solid gainsboro;
+}
+img.sl1{
+    border: 4px dashed blue;
 }
 .c{
-    margin-top: 10em;
+    margin-top: 10px;
+}
+div,h1{
+    font-family:'Times New Roman';
+}
+p{
+    color: gray;
 }

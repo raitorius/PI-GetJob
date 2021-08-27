@@ -109,6 +109,7 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <div>
                     <!-- <input type="submit" name="est" id="est" placeholder="estado" required> -->
                     <select name="estado" id="">
+                    <option value="AP">Estado</option>
                         <option value="AP">Amapá</option>
                         <option value="AL">Alagoas</option>
                         <option value="AC">Acre</option>

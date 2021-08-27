@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ 
 include_once(dirname(__FILE__) . "../inc/MySQL.php");
 
 include_once("./inc/menu.php");
@@ -13,7 +13,7 @@ $aviso = false;
 if (isset($_POST['enviar'])) {
 	$email = $_POST['email'];
 	$senha = md5($_POST['senha']);
-	$sql = $pdo->prepare("SELECT * FROM usuarios 
+	$sql = $pdo->prepare("SELECT * FROM funcionario 
                               WHERE email= ? AND senha = ?");
 	if ($sql->execute(array($email, $senha))) {
 		$info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -48,9 +48,7 @@ if (isset($_POST['enviar'])) {
 						<hr>
 					</div>
 					<div class="group">
-						<form action="/lista-funcionarios.php" method="post">
-							<input type="submit" class="button" value="Entrar" name="enviar">
-						</form>
+						<input type="submit" class="button" value="Entrar" name="enviar">
 					</div>
 					<div class="hr"></div>
 				</div>
@@ -61,20 +59,18 @@ if (isset($_POST['enviar'])) {
 						<hr>
 					</div>
 					<div class="group">
-						<form action="action.php" method="post">
-							<input type="submit" class="button" value="Redefinir Senha">
-						</form>
+						<input type="submit" class="button" value="Redefinir Senha">
 					</div>
 					<div class="hr"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php
-	if ($aviso) {
-		echo $aviso;
-	}
-	?>
+<?php 
+if($aviso) {
+echo $aviso;
+}
+?>
 </form>
 
 <?php

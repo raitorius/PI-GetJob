@@ -10,11 +10,8 @@ include_once(dirname(__FILE__)."./inc/menu.php");
 
 ?>
 
-<h1>Serviços cadastrados no GetJob:</h1>
-          
-
 <?php
-$sql = $pdo->prepare('SELECT * FROM funcionario order by profissao');
+$sql = $pdo->prepare('SELECT * FROM funcionario');
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -26,7 +23,7 @@ if ($sql->execute()) {
         echo 'profissao: ' . $values['profissao'] . '<br>';
         echo 'telefone: ' . $values['telefone'] . '<br>';
         echo 'descricao: ' . $values['descricao'] . '<br>';
-        echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil)<a/>";
+
     
 
     
@@ -39,11 +36,6 @@ if ($sql->execute()) {
     }
 }
 
-
-//echo ("Olá O usuário:$ é o usuário número $id. sua descricao é: $descricao");
-
-//echo ("<BR><BR>Nome: $nome<br>E-mail: $email<br> Formação: $formacao<br>Telefone: $telefone<br>Descrição: $descricao<Br>Senha:$senha</a>");
-
 ?>
 
 <?php
@@ -51,7 +43,3 @@ if ($sql->execute()) {
 include_once(dirname(__FILE__)."./inc/footer.php");
 
 ?>
-
-
-
-

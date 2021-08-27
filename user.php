@@ -4,7 +4,6 @@ include_once("./inc/menu.php");
 $id = 12;
 
 include_once(dirname(__FILE__) . "./inc/MySQL.php");
-echo "<p style='color:black'>Conectado com sucesso!!</p>";
 
 $sql = $pdo->prepare('SELECT id, nome, estado, nascimento, email, imagem FROM usuarios WHERE id = ' . $id);
 
@@ -32,25 +31,43 @@ if ($sql->execute()) {
 </head>
 
 <body>
-    <main>
-        <div class="h-100 bck row">
-            <div class="col sl1">
+    <div class="bck p-5 container-fluid">
+        <div class="col">
+            <div class="row">
                 <img class="sl1" src="<?php echo $img; ?>">
-                <h1 style="color: white"><?php echo $nome; ?></h1>
-                <h1 style="font-family:'Times New Roman';">DESCRIÇÃO:</h1>
-            </div>
-            <div class="col sl1">
-            <h1 style="font-family:'Times New Roman';">INFORMAÇÕES:</h1>
-            <div class="col c">
-                <h3>Nascimento: <?php echo $nasc ?></h3>
-                <h3>Email: <?php echo $email ?></h3>
-                <h3>Estado: <?php echo $estado ?></h3>
-            </div>
+                <h1 style="color: white; modal-content"> <?php echo $nome; ?></h1>
             </div>
         </div>
-        <?php
-        include_once(dirname(__FILE__) . "./inc/footer.php");
-        ?>
+        <main>
+    </div>
+    <div class="col sl1">
+        <div class="col c">
+            <h2>Nome Completo: <br>
+                <p><?php echo $nome; ?></p>
+            </h2>
+            <h2>Data de Nascimento: <br>
+                <p><?php echo $nasc;?></p>
+            </h2>
+            <h2>Estado: <br>
+                <p><?php echo $estado; ?></p>
+            </h2>
+        </div>
+    </div>
+    <div class="col sl1">
+        <h1>Biografia:</h1>
+        <div class="h-25 d-inline-block">
+
+        </div>
+    </div>
+    <div class="col sl1">
+        <h1 class="mx-auto">Contato:</h1>
+        <h2>E-mail: <br>
+            <p><?php echo $email; ?></p>
+        </h2>
+    </div>
+    <?php
+    include_once(dirname(__FILE__) . "./inc/footer.php");
+    ?>
     </main>
 </body>
 

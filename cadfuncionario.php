@@ -49,6 +49,11 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                     <div class="efeito"></div>
                 </div>
                 <br>
+                <div class="input-field">
+                    <input type="text" name="telefone" id="telefone" maxlength="10" required placeholder="Telefone">
+                    <div class="efeito"></div>
+                </div>
+                <br>
                 <div>
                     <label>Formação</label>
                     <input type="radio" name="formacao" id="formacao" value="fundamental" required>Fundamental
@@ -56,19 +61,23 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                     <input type="radio" name="formacao" id="formacao" value="superior" required>Ensino-Superior
                 </div>
                 <br>
-                <div class="input-field">
-                    <input type="text" name="telefone" id="telefone" maxlength="10" required placeholder="Telefone">
-                    <div class="efeito"></div>
+                <br>
+                <div>
+                    <textarea name="experiencia" id="experiencia" cols="45" rows="5" placeholder="Experiência" maxlength="500"></textarea>
                 </div>
                 <br>
                 <div>
-                    <textarea name="descricao" id="descricao" cols="35" rows="10" placeholder="Descrição" maxlength="500"></textarea>
+                    <textarea name="descricao" id="descricao" cols="45" rows="8" placeholder="Descrição" maxlength="500"></textarea>
                 </div>
+                <label for="img">Imagem de Perfil:</label>
+            <input type="file" name="img" />
+                <br>
                 <br>
                 <div class="input-field">
                     <input type="password" name="senha" id="senha" placeholder="Senha" minlength="5" maxlength="15">
                     <div class="efeito"></div>
                 </div>
+
                 <input type="submit" name="cadastro" value="Cadastrar Funcionário">
             </fieldset>
         </form>

@@ -15,7 +15,7 @@ if ($sql->execute()) {
         <div class="container">
             <div class="container-fluid">
                 <div class="row a">
-                    <div class="col-3 slot">
+                    <div class="col-3">
                         <?php echo $nome ?>
                         <img class="img-fluid" src="./assets/img/unload.png">
                         <?php echo $desc ?>

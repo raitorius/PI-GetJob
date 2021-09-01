@@ -7,7 +7,7 @@ include_once("./inc/menu.php");
 include_once("./inc/header.php");
 
 $_SESSION['email'] = "";
-//$_SESSION['senha'] = "";
+
 
 $aviso = false;
 if (isset($_POST['enviar'])) {
@@ -61,7 +61,7 @@ if (isset($_POST['enviar'])) {
 						<hr>
 					</div>
 					<div class="group">
-						<form action="action.php" method="post">
+						<form action="/admin/teste-admin.php" method="post">
 							<input type="submit" class="button" value="Redefinir Senha">
 						</form>
 					</div>

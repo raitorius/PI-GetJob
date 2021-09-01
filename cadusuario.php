@@ -80,8 +80,8 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <div class="efeito"></div>
             </div>
             <br>
-            <label class="cor">Data de nascimento</label>
             <div>
+            <p class="cor">Data de nascimento</p>
                 <input type="date" name="nascimento" id="nascimento" required>
             </div>
             <br>
@@ -109,7 +109,6 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <div>
                     <!-- <input type="submit" name="est" id="est" placeholder="estado" required> -->
                     <select name="estado" id="">
-                    <option value="AP">Estado</option>
                         <option value="AP">Amapá</option>
                         <option value="AL">Alagoas</option>
                         <option value="AC">Acre</option>

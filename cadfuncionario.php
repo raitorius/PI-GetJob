@@ -1,10 +1,11 @@
 <?php
-
+ 
 include_once(dirname(__FILE__)."/inc/MySQL.php");
 
 
-
+ 
 if (isset($_POST['cadastro'])) {
+    $img = $_POST['img'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $formacao = $_POST['formacao'];
@@ -13,11 +14,12 @@ if (isset($_POST['cadastro'])) {
     $descricao = $_POST['descricao'];
     $senha = md5($_POST['senha']);
       //acentuação da erro 
-    $sql = $pdo->prepare("INSERT INTO funcionario (id,nome,email,formacao,profissao,telefone,descricao,senha) values (null,?,?,?,?,?,?,?)");
-    if ($sql->execute(array($nome, $email, $formacao,$profissao, $telefone, $descricao, $senha))) {
+    $sql = $pdo->prepare("INSERT INTO funcionario (id,img,nome,email,formacao,profissao,telefone,descricao,senha) values (null,?,?,?,?,?,?,?,?)");
+    if ($sql->execute(array($img,$nome, $email, $formacao,$profissao, $telefone, $descricao, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('location:/GetJob-ProjetoIntegrador/login.php');
+       header('location:/GetJob-ProjetoIntegrador/login.php');
+        //nao tá achando o login no header
     } else {
         echo 'Dados não cadastrados!';
     }
@@ -56,26 +58,29 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                 </div>
                 <br>
                 <div>
-                    <label>Formação</label>
+                   <h6 class="font2">Formação</h6>
                     <input type="radio" name="formacao" id="formacao" value="fundamental" required>Fundamental
                     <input type="radio" name="formacao" id="formacao" value="médio" required>Ensino-Médio
                     <input type="radio" name="formacao" id="formacao" value="superior" required>Ensino-Superior
                 </div>
+                <br>
                 <div>
-                    <br>
                     <textarea name="profissao" id="profissao" cols="45" rows="3" placeholder="Profissões" maxlength="500"></textarea>
                 </div>
-                <br>
                 <br>
                 <div>
                     <textarea name="experiencia" id="experiencia" cols="45" rows="5" placeholder="Experiência" maxlength="500"></textarea>
                 </div>
                 <br>
                 <div>
-                    <textarea name="descricao" id="descricao" cols="45" rows="10" placeholder="Descrição" maxlength="500"></textarea>
+                    <textarea name="descricao" id="descricao" cols="45" rows="8" placeholder="Descrição" maxlength="500"></textarea>
                 </div>
-                <label for="img">Imagem de Perfil:</label>
-            <input type="file" name="img" />
+                <div>
+                <label for="img">Imagem de Perfil</label>
+            <input  type="file" name="img" id="img" />
+            <br>
+            <p>Clique para selecionar uma imagem de perfil*</p>
+            </div>
                 <br>
                 <br>
                 <div class="input-field">

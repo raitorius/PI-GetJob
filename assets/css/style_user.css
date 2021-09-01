@@ -1,5 +1,6 @@
 .bck{
     background-color:  slategrey;
+    padding: 7em;
 }
 .sl1{
     border: 2px solid gainsboro;
@@ -10,9 +11,27 @@ img.sl1{
 .c{
     margin-top: 10px;
 }
-div,h1{
+div,h2{
     font-family:'Times New Roman';
 }
 p{
     color: gray;
 }
+
+.info-person{
+    font-size:22px;
+    display: inline-block;
+    padding: 10px 30px 0px 0px;
+}
+.info-person .radio{
+  display: none;
+}
+.info-person .list-1:checked+.tab, .info-person .list-2:checked+.tab{
+border-color: white;
+}
+.info-person .tab{
+    margin-right: 15px;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+}
+

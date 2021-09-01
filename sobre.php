@@ -8,25 +8,6 @@ include_once("./inc/menu.php")
 <br>
 <br>
 <br>
-<div class="row justify-content-center modal-dialog container">
-  <div class="d-flex text-center text-white">
-    <div class="lala mx-5 p-5 border border-#000000">
-      Faça seus pedidos
-    </div>
-    <div class="lala mx-5 p-5 border border-#000000">
-      Pesquise o melhor preço
-    </div>
-    <div class="lala mx-5 p-5 border border-#000000">
-      Garanta o melhor
-    </div>
-
-    <div class="lala mx-5 p-5 border border-#000000">
-      Todos os tipos de serviços
-    </div>
-  </div>
-</div>
-<br>
-<h1 class="teste">Os mais solicitados no GetJob</h1>
 <?php
 
 

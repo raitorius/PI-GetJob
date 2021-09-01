@@ -5,7 +5,7 @@ include_once(dirname(__FILE__)."/inc/menu.php");
 ?>
 
 <?php
-include_once(dirname(__FILE__)."/cad_funcionarios/listfuncionario.php");
+include_once(dirname(__FILE__)."/cad_usuarios/listusuario.php");
 ?>
 
 

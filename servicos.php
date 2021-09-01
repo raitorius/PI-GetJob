@@ -10,7 +10,7 @@ include_once(dirname(__FILE__)."./inc/menu.php");
 
 ?>
 
-<h1>Serviços cadastrados no GetJob1:</h1>
+<h1>Serviços cadastrados no GetJob:</h1>
           
 
 <?php

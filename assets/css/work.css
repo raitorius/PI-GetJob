@@ -1,9 +1,6 @@
-.slot{
-    border: 2px dashed green;
-    margin: 2em;
-}
 .a{
     border: 10px solid black;
+    padding: 20px;
 }
 .s{
     border: 2px solid yellow;

@@ -148,6 +148,29 @@ form input[type="submit"]:hover {
     background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
 }
 
+ input[type="file"]{
+     display: none;
+    /*letter-spacing: 0.5px;
+    background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
+    border-radius: 5px;*/
+}
+
+label{
+    padding: 3px 15px;
+    width: 200px;
+    background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
+    color: white;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+
 .font1 {
     font-size: 25px;
+}
+
+.font2 {
+    font-size: 17px;
+    width: 4.5px;
+    color: rgb(24, 24, 24);
 }

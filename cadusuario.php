@@ -80,8 +80,13 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <div class="efeito"></div>
             </div>
             <br>
+<<<<<<< HEAD
             <div>
             <p class="cor">Data de nascimento</p>
+=======
+            <label class="cor">Data de nascimento</label>
+            <div>
+>>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
                 <input type="date" name="nascimento" id="nascimento" required>
             </div>
             <br>

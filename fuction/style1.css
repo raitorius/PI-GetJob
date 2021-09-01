@@ -124,16 +124,26 @@ form .input-field:first-child {
 }
 
 .efeito {
+<<<<<<< HEAD
     display: block;
+=======
+    /*display: block;*/
+>>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
     content: "";
     position: absolute;
     bottom: 0;
     height: 1px;
     left: 0;
     right: 0;
+<<<<<<< HEAD
     background: black;
     width: 1px;
     transition: all 1s;
+=======
+    background: #d4d4d4;
+    width: 900px;
+    /*transition: all 1s;*/
+>>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
 }
 
 .input-field input:focus + div {

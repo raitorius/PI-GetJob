@@ -30,6 +30,11 @@ if (isset($_POST['enviar'])) {
 }
 ?>
 
+
+
+
+
+
 <form action="" method="post">
 	<div class="login-wrap">
 		<div class="login-html">
@@ -80,4 +85,5 @@ if (isset($_POST['enviar'])) {
 <?php
 
 include_once(dirname(__FILE__) . "/inc/footer.php");
-?>
+
+

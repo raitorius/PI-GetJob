@@ -8,15 +8,16 @@ if (isset($_POST['cadastro'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $formacao = $_POST['formacao'];
+    $profissao = $_POST['profissao'];
     $telefone = $_POST['telefone'];
     $descricao = $_POST['descricao'];
     $senha = md5($_POST['senha']);
       //acentuação da erro 
-    $sql = $pdo->prepare("INSERT INTO funcionario (id,nome,email,formacao,telefone,descricao,senha) values (null,?,?,?,?,?,?)");
-    if ($sql->execute(array($nome, $email, $formacao, $telefone, $descricao, $senha))) {
+    $sql = $pdo->prepare("INSERT INTO funcionario (id,nome,email,formacao,profissao,telefone,descricao,senha) values (null,?,?,?,?,?,?,?)");
+    if ($sql->execute(array($nome, $email, $formacao, $profissao, $telefone, $descricao, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
-        header('location:/GetJob-ProjetoIntegrador/login.php');
+        header('location:/GetJob-ProjetoIntegrador/loginfuncionario.php');
     } else {
         echo 'Dados não cadastrados!';
     }

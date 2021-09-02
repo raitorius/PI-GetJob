@@ -1,7 +1,7 @@
 
 <?php
 $pdo = new PDO('mysql:host=localhost:3308;dbname=getjob', 'root', '');
-
+//teste
 $sql = $pdo->prepare('SELECT * FROM usuarios');
 if($sql->execute()){
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);

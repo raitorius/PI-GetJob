@@ -4,18 +4,11 @@
     
     // Variável nome recebe o nome da sessão
 
-    // if(isset($_SESSION['nome'])){
-    //     $nome = $_SESSION['nome'];
-    // } else {
-    //     $nome = '';
-    // }
-
     // Verifica se a variável foi setada primeiro e a recebe
     // caso contrário recebe vazio;
     $nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : "";
     
-    // 
-    $administrador = $_SESSION['administrador'];
+    $administrador = isset($_SESSION['administrador']) ? ($_SESSION['administrador']) : "";
     
     // Escreve mensagem de boas vindas na tela ???
     echo "<h1>Ola $nome. <br>Seja bem vindo ao sistema!</h1>";

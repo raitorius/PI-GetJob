@@ -60,24 +60,12 @@ function validaCPF($cpf)
     }
     return true;
 }
-
+include_once(dirname(__FILE__)."/inc/header.php");
 ?>
 
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cad Usuário</title>
-    <link rel="stylesheet" href="fuction/style1.css">
-    <link rel="stylesheet" href="fuction/font.css">
-</head>
-
-<body>
     <main class="container">
         <form>
             <fieldset>
@@ -178,6 +166,7 @@ function validaCPF($cpf)
             </fieldset>
         </form>
     </main>
-</body>
-
-</html>
+    <?php
+    include_once(dirname(__FILE__)."/inc/footer.php");
+    ?>
+    

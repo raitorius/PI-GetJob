@@ -12,10 +12,6 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
 <h1>Serviços cadastrados no GetJob:</h1>
 
-<style>
-  body {
-    background: white;
-    border-radius: 4px;
 
   }
 
@@ -49,21 +45,14 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($info as $key => $values) {
-      echo '<div class="row test">';
-      echo '<div class=" col-4">';
-      echo '<div class="img">img:</div>  ' . $values['img'] . '';
-      echo "</div>";
-      echo '<div class="text-left col-8 p-3">';
-
-      echo 'nome: ' . $values['nome'] . '<br>';
-      echo 'email: ' . $values['email'] . '<br>';
-      echo 'formacao: ' . $values['formacao'] . '<br>';
-      echo 'profissao: ' . $values['profissao'] . '<br>';
-      echo 'telefone: ' . $values['telefone'] . '<br>';
-      echo 'descricao:  ' . $values['descricao'] . '<br>';
-      echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil)</a>";
-      echo "</div>";
-      echo "</div>";
+        echo 'img: ' . $values['img'] . '<br>';
+        echo 'nome: ' . $values['nome'] . '<br>';
+        echo 'email: ' . $values['email'] . '<br>';
+        echo 'formacao: ' . $values['formacao'] . '<br>';
+        echo 'profissao: ' . $values['profissao'] . '<br>';
+        echo 'telefone: ' . $values['telefone'] . '<br>';
+        echo 'descricao: ' . $values['descricao'] . '<br>';
+        echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil)<a/>";
 
 
 
@@ -72,17 +61,16 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
 
 
-      echo '<hr>';
+        echo '<hr>';
     }
-  }
+}
 
 
-  //echo ("Olá O usuário:$ é o usuário número $id. sua descricao é: $descricao");
+//echo ("Olá O usuário:$ é o usuário número $id. sua descricao é: $descricao");
 
-  //echo ("<BR><BR>Nome: $nome<br>E-mail: $email<br> Formação: $formacao<br>Telefone: $telefone<br>Descrição: $descricao<Br>Senha:$senha</a>");
+//echo ("<BR><BR>Nome: $nome<br>E-mail: $email<br> Formação: $formacao<br>Telefone: $telefone<br>Descrição: $descricao<Br>Senha:$senha</a>");
 
-  ?>
-</div>
+?>
 
 <?php
 

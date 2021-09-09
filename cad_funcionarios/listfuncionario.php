@@ -7,13 +7,12 @@ if ($sql->execute()) {
 
     foreach ($info as $key => $values) {
         echo 'id: ' . $values['id'] . '<br>';
-        echo 'img: ' . $values['img'] . '<br>';
         echo 'nome: ' . $values['nome'] . '<br>';
         echo 'email: ' . $values['email'] . '<br>';
         echo 'formacao: ' . $values['formacao'] . '<br>';
-        echo 'profissao: ' . $values['profissao'] . '<br>';
         echo 'telefone: ' . $values['telefone'] . '<br>';
         echo 'descricao: ' . $values['descricao'] . '<br>';
+        echo 'senha: ' . $values['senha'] . '<br>';
         echo "<a href='deletFunci.php?id=" . $values['id'] . "'>(Deletar)<a/>";
         echo "<a href='atualifuncionario.php?id=" . $values['id'] . "'>(Atualizar)<a/>";
 
@@ -25,4 +24,4 @@ if ($sql->execute()) {
 }
 
 ?>
-<input type="button" value="Cadastrar" onclick="parent.location='cadfuncionario.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='cadusuario.php'">

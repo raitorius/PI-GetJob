@@ -9,3 +9,15 @@
 .vagas{
     margin: 2px solid gold;
 }
+.nome{
+    border: 2px solid blue;
+    text-align: center;
+    background-color: gray;
+}
+.mar{
+    border: 3px green outset;
+}
+.desc{
+    padding: 2em;
+    padding-bottom: 10em;
+}

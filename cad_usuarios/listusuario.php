@@ -18,6 +18,8 @@ if($sql->execute()){
         echo 'cidade: '.$values['cidade'].'<br>';
         echo 'cep: '.$values['cep'].'<br>';
         echo'email'.$values['email'].'<br';
+        echo'senha'.$values['senha'].'<br>';
+        
        echo "<a href='deletusuario.php?id=".$values['id']."'>(Deletar)<a/>";
        echo "<a href='atualiusuario.php?id=".$values['id']."'>(Atualizar)<a/>";
 

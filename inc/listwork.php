@@ -24,7 +24,7 @@ if ($sql->execute()) {
                         <?php echo $nome ?>
                         <img class="img-fluid" src="./assets/img/unload.png">
                         <?php echo $id ?>
-                        <div class="text-center"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset gray" role="button" href="workperf.php?id=">Contratar</a></button></div>
+                        <div class="text-center"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset gray" role="button" href="workperf.php?id=<?php echo $values['ID']; ?>">Contratar</a></button></div>
                     </div>
                 </div>
         <?php

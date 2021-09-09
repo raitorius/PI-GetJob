@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
  
 include_once(dirname(__FILE__)."/inc/MySQL.php");
 
@@ -11,35 +10,15 @@ if (isset($_POST['cadastro'])) {
     $email = $_POST['email'];
     $formacao = $_POST['formacao'];
     $profissao = $_POST['profissao'];
-=======
-
-include_once(dirname(__FILE__)."/inc/MySQL.php");
-
-
-
-if (isset($_POST['cadastro'])) {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $formacao = $_POST['formacao'];
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
     $telefone = $_POST['telefone'];
     $descricao = $_POST['descricao'];
     $senha = md5($_POST['senha']);
       //acentuação da erro 
-<<<<<<< HEAD
-    $sql = $pdo->prepare("INSERT INTO funcionario (id,img,nome,email,formacao,profissao,telefone,descricao,senha) values (null,?,?,?,?,?,?,?,?)");
-    if ($sql->execute(array($img,$nome, $email, $formacao,$profissao, $telefone, $descricao, $senha))) {
-        echo 'Dados cadastrados com sucesso.';
-       //header, faz o redcionamento das páginas//
-       header('location:/GetJob-ProjetoIntegrador/login.php');
-        //nao tá achando o login no header
-=======
     $sql = $pdo->prepare("INSERT INTO funcionario (id,nome,email,formacao,telefone,descricao,senha) values (null,?,?,?,?,?,?)");
     if ($sql->execute(array($nome, $email, $formacao, $telefone, $descricao, $senha))) {
         echo 'Dados cadastrados com sucesso.';
        //header, faz o redcionamento das páginas//
         header('location:/GetJob-ProjetoIntegrador/login.php');
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
     } else {
         echo 'Dados não cadastrados!';
     }
@@ -84,12 +63,9 @@ include_once(dirname(__FILE__)."/inc/menu.php");
                     <input type="radio" name="formacao" id="formacao" value="superior" required>Ensino-Superior
                 </div>
                 <br>
-<<<<<<< HEAD
                 <div>
                     <textarea name="profissao" id="profissao" cols="45" rows="3" placeholder="Profissões" maxlength="500"></textarea>
                 </div>
-=======
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
                 <br>
                 <div>
                     <textarea name="experiencia" id="experiencia" cols="45" rows="5" placeholder="Experiência" maxlength="500"></textarea>

@@ -5,7 +5,7 @@ include_once(dirname(__FILE__) . "/inc/header.php");
 include_once("./inc/menu.php");
 $id = $_GET['id'];
 
-$sql = $pdo->prepare('SELECT ID, nome, descricao FROM anuncios WHERE ID = ' . $id);
+$sql = $pdo->prepare('SELECT id, nome, descricao FROM anuncios WHERE id = ' . $id);
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -19,7 +19,7 @@ if ($sql->execute()) {
 
 <div class="container center p-4">
     <div class="nome shadow-lg p-2">
-        <h2><?php echo $nome ?></h2>
+        <h2><?php echo $nome; ?></h2>
         <div class="text-right s"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset orange" role="button" href="login.php">Contratar</a></button></div>
     </div>
 </div>

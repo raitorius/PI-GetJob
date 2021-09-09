@@ -19,11 +19,13 @@ if (isset($_POST['cadastro'])) {
     $sql = $pdo->prepare("INSERT INTO usuarios (id,nome,nascimento,rg,cpf,rua,bairro,estado,cidade,cep,email,senha) values (null,?,?,?,?,?,?,?,?,?,?,?)");
     if ($sql->execute(array($nome, $nascimento, $rg, $cpf, $rua, $bairro, $estado, $cidade, $cep, $email, $senha))) {
         echo 'Dados cadastrados com sucesso.';
+        // echo da o alert se os dados estão cadastrados ou não
         //header, faz o redcionamento das páginas//
         header('location:/GetJob-ProjetoIntegrador/login.php');
         //nao tá achando o login no header
     } else {
         echo 'Dados não cadastrados!';
+        //echo pra avisar se os dados NÃO estão cadastrados 
     }
 }
 

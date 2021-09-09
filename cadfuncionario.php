@@ -34,6 +34,7 @@ if (isset($_POST['cadastro'])) {
         //header, faz o redcionamento das páginas//
         header('location:/GetJob-ProjetoIntegrador/loginfuncionario.php');
     } else {
+        //echo de avisos para se estiver cadastrado ou não
         echo 'Dados não cadastrados!';
     }
 }

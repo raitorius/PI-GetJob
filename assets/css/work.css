@@ -1,8 +1,11 @@
 .a{
     border: 10px solid black;
-    padding: 20px;
+    padding: 1px;
+    background-color: white;
 }
 .s{
-    border: 2px solid yellow;
-    font-size: 10px;
+    padding: 10px;
+}
+.vagas{
+    margin: 2px solid gold;
 }

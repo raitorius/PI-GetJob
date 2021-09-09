@@ -24,8 +24,6 @@ include_once(dirname(__FILE__)."./inc/menu.php");
       background: linear-gradient(45deg, #ffffff, #C0C0C0, rgb(220,220,220));
       font-family: 'Poppins', sans-serif;
       box-shadow: 2px 2px 8px black;
-     /* display: flex;
-    justify-content: space-between;*/
     border: solid;
     border-color: black;
     border-radius: 6px;
@@ -34,9 +32,6 @@ include_once(dirname(__FILE__)."./inc/menu.php");
   }
 
   .img{
-  
-    display: flex;
-    justify-content: space-between;
    
   }
 </style>
@@ -50,14 +45,16 @@ include_once(dirname(__FILE__)."./inc/menu.php");
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($info as $key => $values) {
-            echo '<div class="test"> <div class="img">img:</div>  ' . $values['img'] . '';
+            echo '<div class="test">';
+            echo '<div class="img">img:</div>  ' . $values['img'] . '';
             echo 'nome: ' . $values['nome'] . '<br>';
             echo 'email: ' . $values['email'] . '<br>';
             echo 'formacao: ' . $values['formacao'] . '<br>';
             echo 'profissao: ' . $values['profissao'] . '<br>';
             echo 'telefone: ' . $values['telefone'] . '<br>';
             echo 'descricao:  ' . $values['descricao'] . '<br>';
-            echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil) </div><a/>";
+            echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil)</a>";
+            echo "</div>";
         
 
         

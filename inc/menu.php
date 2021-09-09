@@ -1,4 +1,4 @@
-<div class="container-fluid" style="overflow: hidden">
+<div class="container-fluid" style="overflow: hidden;">
   <div class="black row text-white" style="justify-content: space-between; background-color: black">
     <div class="navbar">
       <div class="p-4">
@@ -17,8 +17,7 @@
               <div class="btn-group dropright">
 
 
-                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Cadastro </a> </li>
-<<<<<<< HEAD
+                <li class="my-3type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Cadastro </a> </li>
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="cadfuncionario.php">Funcionário</a></li>
@@ -30,7 +29,7 @@
               <div class="btn-group dropright">
 
 
-                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="login.php">Login</a></li>
+                <li class="my-3type  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="login.php">Login</a></li>
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="loginfuncionario.php">Funcionário</a></li>
@@ -41,42 +40,18 @@
 
               <div class="btn-group dropright">
 
-
-                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Serviços </a> </li>
+                <li class="my-3type  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Serviços </a> </li>
                 <div class="dropdown-menu">
                   <ul>
-                    <li> <a href="serviços.php">Funcionários</a></li>
+                    <li> <a href="servicos.php">Funcionários</a></li>
 
-=======
-                <div class="dropdown-menu">
-                  <ul>
-                    <li> <a href="cadfuncionario.php">Funcionário</a></li>
-                    <li><a href="cadusuario.php">Usuário</a></li>
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
-                  </ul>
+                   
+
                 </div>
-              </div>
 
-<<<<<<< HEAD
-=======
               
 
-              <li class="my-3"><a href="login.php"><img class="w-25 h-25" src="assets/img/icon.png"> Login</a></li>
 
-              <div class="btn-group dropright">
-
-
-<li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Serviços </a> </li>
-<div class="dropdown-menu">
-  <ul>
-    <li> <a href="servempresas.php">Empresas</a></li>
-    <li><a href="servfuncionarios.php">Usuário</a></li>
-  </ul>
-</div>
-</div>
-
-            
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
             </ul>
           </div>
         </div>

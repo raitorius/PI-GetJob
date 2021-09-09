@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
 }
 
+
 /*Main*/
 
 main.container {
@@ -53,8 +54,8 @@ main h1::before {
     bottom: 6px;
     left: 0;
     border-radius: 16px;
-
 }
+
 
 /*main form input {
     background: rgb(255, 255, 255);
@@ -72,8 +73,8 @@ main form label {
 main form select {
     background: #ffffff;
     border-radius: 5px;
-    
 }
+
 
 /*INput*/
 
@@ -95,6 +96,7 @@ form .input-field:first-child {
     background: rgba(0, 0, 0, 0.2);
 }
 
+
 /*.input-field .underline::after {
     content: '';
     position: absolute;
@@ -113,7 +115,8 @@ form .input-field:first-child {
     border-bottom: 1px solid transparent;
 }
 
-.input-field input:active, .input-field input:focus {
+.input-field input:active,
+.input-field input:focus {
     outline: none !important;
     /*border: none !important;**/
     border-bottom: 1px solid black;
@@ -124,35 +127,26 @@ form .input-field:first-child {
 }
 
 .efeito {
-<<<<<<< HEAD
     display: block;
-=======
-    /*display: block;*/
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
     content: "";
     position: absolute;
     bottom: 0;
     height: 1px;
     left: 0;
     right: 0;
-<<<<<<< HEAD
     background: black;
     width: 1px;
     transition: all 1s;
-=======
-    background: #d4d4d4;
-    width: 900px;
-    /*transition: all 1s;*/
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
 }
 
-.input-field input:focus + div {
+.input-field input:focus+div {
     width: 100%;
 }
 
 .input-field input::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
+
 
 /*Form */
 

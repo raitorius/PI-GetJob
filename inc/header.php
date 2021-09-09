@@ -1,3 +1,7 @@
+<?php
+include_once(dirname(__FILE__)."/session.php");
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,6 +16,8 @@
   <link rel="stylesheet" href="assets/css/serv.css">
 
   <link rel="icon" href="assets/img/logo_web.png">
+  <link rel="icon" href="assets/img/logo.png">
+  
  
 </head>
 <body>

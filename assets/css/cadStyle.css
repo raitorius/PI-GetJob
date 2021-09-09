@@ -8,13 +8,13 @@
 }
 
 body {
-    background: linear-gradient(45deg, #1d1c1c, rgb(83, 83, 83));
+    background: white;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    color:black;
 }
+
 
 /*Main*/
 
@@ -55,6 +55,7 @@ main h1::before {
     border-radius: 16px;
 }
 
+
 /*INput*/
 
 .input-field {
@@ -75,6 +76,7 @@ form .input-field:first-child {
     background: rgba(0, 0, 0, 0.2);
 }
 
+
 /*.input-field .underline::after {
     content: '';
     position: absolute;
@@ -93,7 +95,8 @@ form .input-field:first-child {
     border-bottom: 1px solid transparent;
 }
 
-.input-field input:active, .input-field input:focus {
+.input-field input:active,
+.input-field input:focus {
     outline: none !important;
     /*border: none !important;**/
     border-bottom: 1px solid black;
@@ -116,13 +119,14 @@ form .input-field:first-child {
     transition: all 1s;
 }
 
-.input-field input:focus + div {
+.input-field input:focus+div {
     width: 100%;
 }
 
 .input-field input::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
+
 
 /*Form */
 
@@ -148,14 +152,14 @@ form input[type="submit"]:hover {
     background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
 }
 
- input[type="file"]{
-     display: none;
+input[type="file"] {
+    display: none;
     /*letter-spacing: 0.5px;
     background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
     border-radius: 5px;*/
 }
 
-label{
+label {
     padding: 3px 15px;
     width: 200px;
     background: linear-gradient(to left, #2a2a2a, rgb(134, 134, 134));
@@ -163,7 +167,6 @@ label{
     border-radius: 4px;
     letter-spacing: 0.5px;
 }
-
 
 .font1 {
     font-size: 25px;

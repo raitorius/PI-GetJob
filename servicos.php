@@ -19,8 +19,8 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
   }
 
-  .test {
-    border-radius: 6px;
+  row .test {
+   border-radius: 6px;
     background: linear-gradient(45deg, #ffffff, #C0C0C0, rgb(220, 220, 220));
     font-family: 'Poppins', sans-serif;
     box-shadow: 2px 2px 8px black;
@@ -31,7 +31,13 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
   }
 
-  .img {}
+  .img {
+   box-shadow: 2px 1px 6px black;
+   background: linear-gradient(20deg, #000000, #363636, rgb(79,79,79));
+   border-radius: 50px;
+   color: white;
+   
+  }
 </style>
 
 <div class="regis">

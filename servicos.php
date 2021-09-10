@@ -12,11 +12,17 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
 <h1>Serviços cadastrados no GetJob:</h1>
 
-
-
-
 <style>
-  row test {
+  h1{
+    text-align: center;
+  }
+  body {
+    background: white;
+    border-radius: 4px;
+
+  }
+
+  .test {
     border-radius: 6px;
     background: linear-gradient(45deg, #ffffff, #C0C0C0, rgb(220, 220, 220));
     font-family: 'Poppins', sans-serif;
@@ -29,11 +35,8 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
   }
 
   .img {
-    box-shadow: 2px 1px 6px black;
-    background: linear-gradient(20deg, #000000, #363636, rgb(79, 79, 79));
-    border-radius: 50px;
-    color: white;
-
+  padding: 20px;
+  height: 4px;
   }
 </style>
 
@@ -48,7 +51,11 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
     foreach ($info as $key => $values) {
       echo '<div class="row test">';
       echo '<div class=" col-4">';
-      echo '<div class="img">img:</div>  ' . $values['img'] . '';
+      echo '<div class="img">foto de perfil:</div>  ' . '<img src = "data:image/png;base64,' . base64_encode($values['img']) . '" width = "180px" height = "180px"/>';
+
+      
+
+      
       echo "</div>";
       echo '<div class="text-left col-8 p-3">';
 
@@ -65,6 +72,10 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
 
 
+
+
+
+
       echo '<hr>';
     }
   }
@@ -75,9 +86,10 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
   //echo ("<BR><BR>Nome: $nome<br>E-mail: $email<br> Formação: $formacao<br>Telefone: $telefone<br>Descrição: $descricao<Br>Senha:$senha</a>");
 
   ?>
+</div>
 
-  <?php
+<?php
 
-  include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "./inc/footer.php");
 
-  ?>
+?>

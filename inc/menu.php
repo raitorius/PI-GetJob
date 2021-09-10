@@ -5,7 +5,7 @@
         <nav class="navbar navbar-dark black">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
- 
+
           </button>
         </nav>
         <div class="collapse" id="navbarToggleExternalContent" style="position: absolute; z-index: 2020;">
@@ -33,7 +33,7 @@
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="loginfuncionario.php">Funcionário</a></li>
-                
+
                   </ul>
                 </div>
               </div>
@@ -62,15 +62,9 @@
     </div>
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
-    <form class="navbar-form navbar-right p-5" role="search">
-      <div><a href="#sobre" style="color:white">sobre</a></div>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Pesquisar">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-default"> Buscar
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
+    <form method="POST" action="inc/teste.php">
+      <div style="border: 2px white dashed;"><a href="#sobre" style="color:white;">sobre</a></div>
+      <input type="text" name="pesquisar" placeholder="PESQUISAR">
+      <input type="submit" value="ENVIAR">
     </form>
   </div>

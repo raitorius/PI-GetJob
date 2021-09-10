@@ -19,24 +19,34 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
   body {
     background: white;
     border-radius: 4px;
-
   }
 
-  .test {
+  .row.test {
     border-radius: 6px;
     background: linear-gradient(45deg, #ffffff, #C0C0C0, rgb(220, 220, 220));
-    font-family: 'Poppins', sans-serif;
     box-shadow: 2px 2px 8px black;
     border: solid;
     border-color: black;
     border-radius: 6px;
     border-width: 2px;
-
+    font-size: 18px;
   }
 
   .img {
   padding: 20px;
   height: 4px;
+  padding-top: 10px;
+  }
+
+  .img2 {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius:  35px 15px; 
+    height: 197px;
+    padding-top: 12px;
+    box-shadow: 3.5px 3.5px 10px black ;
+  
   }
 </style>
 
@@ -51,13 +61,13 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
     foreach ($info as $key => $values) {
       echo '<div class="row test">';
       echo '<div class=" col-4">';
-      echo '<div class="img">foto de perfil:</div>  ' . '<img src = "data:image/png;base64,' . base64_encode($values['img']) . '" width = "180px" height = "180px"/>';
+      echo '<div class="img">foto de perfil:</div>  ' . '<div class="img2"><img src = "data:image/png;base64,' . base64_encode($values['img']) . '" width = "180px"   height = "170px"/> </div>';
 
       
 
       
       echo "</div>";
-      echo '<div class="text-left col-8 p-3">';
+      echo '<div class="text-left col-8 p-4">';
 
       echo 'nome: ' . $values['nome'] . '<br>';
       echo 'email: ' . $values['email'] . '<br>';

@@ -14,7 +14,7 @@ $result_anuncios = mysqli_query($teste, $result_anun);
 while($rows_anun = mysqli_fetch_array($result_anuncios)){
     echo "Nome do anuncio: ".$rows_anun['nome']."<br>";
     echo "Descrição: " .$rows_anun['descricao']."<br>";
-    echo "<a href='workperf.php?id='>Acessar</a>";
+    echo "<a href='workperf.php'>Acessar</a>";
     echo "<hr>";
 }
 

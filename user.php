@@ -33,33 +33,35 @@ include_once("./inc/header.php");
 </head>
 
 <body onload="pessoal();">
-    <div class="bck container-fluid">
-        <div class="col">
-            <div class="row">
+    <div class="container row">
+
+        <div class="bck">
+            <div class="col">
                 <img class="sl1" src="<?php echo $img; ?>">
                 <h1 style="color: white"> <?php echo $nome; ?></h1>
             </div>
-        </div>
-        <div class="info-person">
-            <div class="p-2 text-center mt-5"><label onclick="pessoal();">Pessoal</label></div>
-            <div class="p-2 text-center mt-5"><label onclick="info();">Info</label></div>
-        </div>
-        <main>
-    </div>
-    <div class="list-1 aaa" id="pessoal">
-        <div class="group col sl1">
-            <div class="col c">
-                <h2>Nome Completo: <br>
-                    <p style="color: black;"><?php echo $nome ?></p>
-                </h2>
-                <h2>Formação: <br>
-                    <p style="color: black;"><?php echo $form ?></p>
-                </h2>
-                <h2>Profissão: <br>
-                    <p style="color: black;"><?php echo $prof ?></p>
-                </h2>
+            <div class="">
+                <div class="p-2 text-center mt-5"><label onclick="pessoal();">Pessoal</label></div>
+                <div class="p-2 text-center mt-5"><label onclick="info();">Info</label></div>
             </div>
         </div>
+
+        <main>
+            <div class="list-1 aaa" id="pessoal">
+                <div class="group col sl1">
+                    <div class="col c">
+                        <h2>Nome Comple: <br>
+                            <p style="color: black;"><?php echo $nome ?></p>
+                        </h2>
+                        <h2>Formação: <br>
+                            <p style="color: black;"><?php echo $form ?></p>
+                        </h2>
+                        <h2>Profissão: <br>
+                            <p style="color: black;"><?php echo $prof ?></p>
+                        </h2>
+                    </div>
+                </div>
+            </div>
     </div>
 
     <div class="list-2 bbb" id="info">

@@ -5,12 +5,13 @@ $id = $_GET['id'];
 
 include_once(dirname(__FILE__) . "./inc/MySQL.php");
 
-$sql = $pdo->prepare('SELECT id, nome email, formacao, profissao, descricao FROM funcionario WHERE id = ' . $id);
+$sql = $pdo->prepare('SELECT id, nome, email, img, formacao, profissao, descricao FROM funcionario WHERE id = ' . $id);
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $values) {
 
+        $img = $values['img'];
         $nome = $values['nome'];
         $email = $values['email'];
         $form = $values['formacao'];
@@ -33,42 +34,42 @@ include_once("./inc/header.php");
 </head>
 
 <body onload="pessoal();">
-<div class="container">
+    <div class="container">
 
-    <div class="row">
-        <div class="bck col-7">
-            <div class="col">
-              <div class="img"><img class="sl1" src="data:image/png;base64," <?php base64_encode($values['img']) . </div>;?>
-                <h1 style="color: white"> <?php echo $nome; ?></h1>
+        <div class="row">
+            <div class="bck col-7">
+                <div class="col">
+                    <img src="data:image/png;base64" <?php echo base64_encode($values['img']); ?>>
+                    <h1 style="color: white"> <?php echo $nome; ?></h1>
+                </div>
+                <div class="">
+                    <div class="p-2 text-center mt-5"><label onclick="pessoal();">Pessoal</label></div>
+                    <div class="p-2 text-center mt-5"><label onclick="info();">Info</label></div>
+                </div>
             </div>
-            <div class="">
-                <div class="p-2 text-center mt-5"><label onclick="pessoal();">Pessoal</label></div>
-                <div class="p-2 text-center mt-5"><label onclick="info();">Info</label></div>
-            </div>
-        </div>
-        
-        <main>
-            <div class="list-1 aaa" id="pessoal">
-                <div class="group col sl1">
-                    <div class="col c">
-                        <h2>Nome Comple: <br>
-                        <p style="color: black;"><?php echo $nome ?></p>
-                    </h2>
-                    <h2>Formação: <br>
-                    <p style="color: black;"><?php echo $form ?></p>
-                </h2>
-                <h2>Profissão: <br>
-                <p style="color: black;"><?php echo $prof ?></p>
-            </h2>
+
+            <main>
+                <div class="list-1 aaa" id="pessoal">
+                    <div class="group col sl1">
+                        <div class="col c">
+                            <h2>Nome Completo: <br>
+                                <p style="color: black;"><?php echo $nome ?></p>
+                            </h2>
+                            <h2>Formação: <br>
+                                <p style="color: black;"><?php echo $form ?></p>
+                            </h2>
+                            <h2>Profissão: <br>
+                                <p style="color: black;"><?php echo $prof ?></p>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
-</div>
-</div>
-</div>
 
-<div class="list-2 bbb" id="info">
-    <div class="group col sl1">
-        <h3>Biografia:</h3>
+    <div class="list-2 bbb" id="info">
+        <div class="group col sl1">
+            <h3>Biografia:</h3>
             <div class="h-25 d-inline-block">
                 <h2><?php echo $desc ?></h2>
             </div>

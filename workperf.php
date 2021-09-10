@@ -20,7 +20,8 @@ if ($sql->execute()) {
 <div class="container center p-4">
     <div class="nome shadow-lg p-2">
         <h2><?php echo $nome; ?></h2>
-        <div class="text-right s"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset orange" role="button" href="login.php">Contratar</a></button></div>
+        <div class="text-right s"><button><a echo style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset orange" role="button" href="login.php">Contratar</a></button></div>
+        <?php echo "<a href='user.php?id=" . $values['id'] . "'>(Ver Perfil)</a>";?>
     </div>
 </div>
 

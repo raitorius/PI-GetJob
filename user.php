@@ -52,7 +52,7 @@ include_once("./inc/header.php");
             <div class="list-1 aaa" id="pessoal">
                 <div class="group col sl1">
                     <div class="col c">
-                        <h2>Nome Comple: <br>
+                        <h2>Nome Completo: <br>
                         <p style="color: black;"><?php echo $nome ?></p>
                     </h2>
                     <h2>Formação: <br>

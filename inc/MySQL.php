@@ -10,9 +10,6 @@ $pdo = new PDO('mysql:host='.DATABASE_HOST.';dbname='.DATABASE_NAME, DATABASE_US
 // $pdo->exec("set names utf8");
 
 
-//OI-SOR
-
-
 
 
 ?>

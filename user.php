@@ -5,12 +5,13 @@ $id = $_GET['id'];
 
 include_once(dirname(__FILE__) . "./inc/MySQL.php");
 
-$sql = $pdo->prepare('SELECT id, nome email, formacao, profissao, descricao FROM funcionario WHERE id = ' . $id);
+$sql = $pdo->prepare('SELECT id, nome, email, img, formacao, profissao, descricao FROM funcionario WHERE id = ' . $id);
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $values) {
-
+  
+        $img = $values['img'];
         $nome = $values['nome'];
         $email = $values['email'];
         $form = $values['formacao'];
@@ -38,7 +39,7 @@ include_once("./inc/header.php");
     <div class="row">
         <div class="bck col-7">
             <div class="col">
-              <div class="img"><img class="sl1" src="data:image/png;base64," <?php base64_encode($values['img']) . </div>;?>
+            <img src="data:image/png;base64" <?php echo base64_encode($values['img']);?>>
                 <h1 style="color: white"> <?php echo $nome; ?></h1>
             </div>
             <div class="">

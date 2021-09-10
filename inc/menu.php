@@ -63,6 +63,7 @@
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
     <form class="navbar-form navbar-right p-5" role="search">
+      <div><a href="#sobre" style="color:white">sobre</a></div>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Pesquisar">
         <span class="input-group-btn">

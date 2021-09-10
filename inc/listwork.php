@@ -9,7 +9,6 @@ if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION['qtde'] = count($info);
 ?>
-
     <div class="container">
         <div class="row">
             <?php

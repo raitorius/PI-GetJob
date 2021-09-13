@@ -19,8 +19,8 @@ while ($rows_anun = mysqli_fetch_array($result_anuncios)) {
     // echo "<a href='workperf.php?id=" . $rows_anun['ID'] . "'>Acessar</a>";
     // echo "<hr>";
 
-    echo "<div style='border: 2px solid blue; background-color: gray'> ". $rows_anun['ID'] ."
-    <div><h1>". $rows_anun['nome'] ."</h1> <h3>". $rows_anun['descricao'] ."</h3></div> 
-    <div><button><a style= role='button'; href='../workperf.php?id=" . $rows_anun['ID'] ."';>Contratar</a></button></div>
+    echo "<div style='border: 5px dashed green; background-color: gray'> ". $rows_anun['ID'] ."
+    <div><h1 style='background-color:white; margin-right:50em'>". $rows_anun['nome'] ."</h1> <h3>". $rows_anun['descricao'] ."</h3></div> 
+    <div><button><a style= role='button'; href='../workperf.php?id=" . $rows_anun['ID'] ."';>Vizualise</a></button></div>
     </div><br>";
 }

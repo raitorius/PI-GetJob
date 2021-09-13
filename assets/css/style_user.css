@@ -11,7 +11,10 @@ img.sl1{
     margin-top: 10px;
 }
 div,h2{
-    font-family:'Times New Roman';
+   /* font-family:'Times New Roman';*/
+   font-family:'Poppins', sans-serif;
+   font-size: 18px;
+   font-weight: bold;
 }
 p{
     color: gray;

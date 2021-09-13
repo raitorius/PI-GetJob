@@ -92,9 +92,36 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                     <div class="efeito"></div>
                 </div>
                 <br>
-                <div class="input-field">
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" required>
-                    <div class="efeito"></div>
+                <div>
+                    
+                    <select name="estado" id="">
+                        <option value="AP">Amapá</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AC">Acre</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato grosso do sul</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PA">Pará</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
                 </div>
                 <br>
                 <div>

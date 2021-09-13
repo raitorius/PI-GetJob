@@ -17,5 +17,4 @@ while ($rows_anun = mysqli_fetch_array($result_anuncios)) {
     echo "ID: " . $rows_anun['ID'] . "<br>";
     echo "<a href='workperf.php?id=" . $rows_anun['ID'] . "'>Acessar</a>";
     echo "<hr>";
-
 }

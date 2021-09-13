@@ -2,21 +2,6 @@
 
 include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
-
-
-// Pegar a imagem postada e inserir no banco
-// por campo BLOB
-/**
- * Estudar file_get_contents() $_FILES
- * 
- */
-
-try {
-    echo file_get_contents($_FILES[""]["tmp_name"]);
-} catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
-
 if (isset($_POST['cadastro'])) {
     $img = $_POST['img'];
     $nome = $_POST['nome'];

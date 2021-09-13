@@ -33,7 +33,6 @@ if (isset($_POST['enviar'])) {
 
 
 
-
 <form action="" method="post">
 	<div class="login-wrap">
 		<div class="login-html">

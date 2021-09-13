@@ -1,5 +1,4 @@
 <?php
-    // Inicio da Sessão
     session_start();
     
     // Variável nome recebe o nome da sessão
@@ -10,7 +9,6 @@
     
     $administrador = isset($_SESSION['administrador']) ? ($_SESSION['administrador']) : "";
     
-    // Escreve mensagem de boas vindas na tela ???
     echo "<h1>Ola $nome. <br>Seja bem vindo ao sistema!</h1>";
     echo "Administrador: $administrador";
    

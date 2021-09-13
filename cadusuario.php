@@ -80,34 +80,15 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <div class="efeito"></div>
             </div>
             <br>
-<<<<<<< HEAD
             <div>
-            <p class="cor">Data de nascimento</p>
-=======
-            <label class="cor">Data de nascimento</label>
-            <div>
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
-                <input type="date" name="nascimento" id="nascimento" required>
-            </div>
-            <br>
-            <div class="input-field">
-                <input type="text" name="rg" id="rg" placeholder="RG" maxlength="8" required>
-                <div class="efeito"></div>
-            </div>
-            <br>
-            <div class="input-field">
-                <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" required>
-                <div class="efeito"></div>
-            </div>
-            <br>
-            <div>
-                <div class="input-field">
-                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
-                    <div class="efeito"></div>
+                <p class="cor">Data de nascimento</p>
+                <label class="cor">Data de nascimento</label>
+                <div>
+                    <input type="date" name="nascimento" id="nascimento" required>
                 </div>
                 <br>
                 <div class="input-field">
-                    <input type="text" name="rua" id="rua" placeholder="Rua" required>
+                    <input type="text" name="rg" id="rg" placeholder="RG" maxlength="8" required>
                     <div class="efeito"></div>
                 </div>
                 <br>
@@ -145,27 +126,70 @@ include_once(dirname(__FILE__) . "/inc/menu.php");
                 <br>
                 <div>
                     <div class="input-field">
-                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
+                        <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
+                        <div class="efeito"></div>
+                    </div>
+                    <br>
+                    <div class="input-field">
+                        <input type="text" name="rua" id="rua" placeholder="Rua" required>
                         <div class="efeito"></div>
                     </div>
                     <br>
                     <div>
+                        <!-- <input type="submit" name="est" id="est" placeholder="estado" required> -->
+                        <select name="estado" id="">
+                            <option value="AP">Amapá</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AC">Acre</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato grosso do sul</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PA">Pará</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
                         <div class="input-field">
-                            <input type="text" name="cep" id="cep" placeholder="CEP" maxlength="9" required>
-                            <div class="efeito"></div>
-                        </div>
-                        <br>
-                        <div class="input-field">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
+                            <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
                             <div class="efeito"></div>
                         </div>
                         <br>
                         <div>
                             <div class="input-field">
-                                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                                <input type="text" name="cep" id="cep" placeholder="CEP" maxlength="9" required>
                                 <div class="efeito"></div>
                             </div>
-                            <input type="submit" name="cadastro" value="Cadastrar Usuário">
+                            <br>
+                            <div class="input-field">
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                                <div class="efeito"></div>
+                            </div>
+                            <br>
+                            <div>
+                                <div class="input-field">
+                                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                                    <div class="efeito"></div>
+                                </div>
+                                <input type="submit" name="cadastro" value="Cadastrar Usuário">
         </fieldset>
     </form>
 </main>

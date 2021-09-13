@@ -1,4 +1,4 @@
-<div class="container-fluid" style="overflow: hidden">
+<div class="container-fluid" style="overflow: hidden;">
   <div class="black row text-white" style="justify-content: space-between; background-color: black">
     <div class="navbar">
       <div class="p-4">
@@ -12,13 +12,12 @@
           <div class="bg-dark p-5">
             <h4 class="text-white">MENU</h4>
             <ul class="col my-5">
-              <li class="my-3"><a href="index.php"><img class="w-25 h-25" src="assets/img/house.png">Inicial</a></li>
+              <li class="my-3"><a href="index.php">Inicial</a></li>
 
               <div class="btn-group dropright">
 
 
-                <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Cadastro </a> </li>
-<<<<<<< HEAD
+                <li class="my-3type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Cadastro </a> </li>
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="cadfuncionario.php">Funcionário</a></li>
@@ -34,49 +33,28 @@
                 <div class="dropdown-menu">
                   <ul>
                     <li> <a href="loginfuncionario.php">Funcionário</a></li>
-                    <li><a href="login.php">Usuário</a></li>
+
                   </ul>
                 </div>
               </div>
 
               <div class="btn-group dropright">
-
 
                 <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Serviços </a> </li>
                 <div class="dropdown-menu">
                   <ul>
-                    <li> <a href="serviços.php">Funcionários</a></li>
+                    <li> <a href="servicos.php">Funcionários</a></li>
 
-=======
-                <div class="dropdown-menu">
-                  <ul>
-                    <li> <a href="cadfuncionario.php">Funcionário</a></li>
-                    <li><a href="cadusuario.php">Usuário</a></li>
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
-                  </ul>
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li> <a href="cadfuncionario.php">Funcionário</a></li>
+                        <li><a href="cadusuario.php">Usuário</a></li>
+                      </ul>
+                    </div>
                 </div>
-              </div>
-
-<<<<<<< HEAD
-=======
-              
-
-              <li class="my-3"><a href="login.php"><img class="w-25 h-25" src="assets/img/icon.png"> Login</a></li>
-
-              <div class="btn-group dropright">
 
 
-<li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=" cadfuncionario.php">Serviços </a> </li>
-<div class="dropdown-menu">
-  <ul>
-    <li> <a href="servempresas.php">Empresas</a></li>
-    <li><a href="servfuncionarios.php">Usuário</a></li>
-  </ul>
-</div>
-</div>
 
-            
->>>>>>> 3c566c2f24838a444a439efe52adbd87f744fee2
             </ul>
           </div>
         </div>
@@ -84,14 +62,9 @@
     </div>
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
-    <form class="navbar-form navbar-right p-5" role="search">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Pesquisar">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-default"> Buscar
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
+    <form method="POST" action="inc/teste.php">
+      <div style="border: 2px white dashed;">pesquisar anúncios</div><br>
+      <input type="text" name="pesquisar" placeholder="PESQUISAR">
+      <input type="submit" value="ENVIAR">
     </form>
   </div>

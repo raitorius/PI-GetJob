@@ -37,7 +37,7 @@ include_once("./inc/header.php");
     <div class="container">
 
         <div class="row">
-            <div class="bck col-7">
+             <div class="bck col-7">
                 <div class="col">
                     <img src="data:image/png;base64" <?php echo base64_encode($values['img']); ?>>
                     <h1 style="color: white"> <?php echo $nome; ?></h1>

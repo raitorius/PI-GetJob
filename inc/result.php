@@ -1,22 +1,26 @@
 <?php
- $servidor = "localhost:3308";
- $usuario = "root";
- $senha = "";
- $dbname = "getjob";
- //Criar a conexao
+$servidor = "localhost:3308";
+$usuario = "root";
+$senha = "";
+$dbname = "getjob";
+//Criar a conexao
 
- $teste = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$teste = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 $pesquisar = $_POST['pesquisar'];
-$result_anun = "SELECT * FROM anuncios WHERE nome LIKE '$pesquisar' LIMIT 5";
+$result_anun = "SELECT * FROM anuncios WHERE nome LIKE '$pesquisar' ";
 $result_anuncios = mysqli_query($teste, $result_anun);
 
-while($rows_anun = mysqli_fetch_array($result_anuncios)){
-    echo "Nome do anuncio: ".$rows_anun['nome']."<br>";
-    echo "Descrição: " .$rows_anun['descricao']."<br>";
-    echo "<a href='workperf.php?id='>Acessar</a>";
-    echo "<hr>";
+echo "Você pesquisou: " . $pesquisar;
+while ($rows_anun = mysqli_fetch_array($result_anuncios)) {
+    // echo "<div class='col col-md-3 p-3 mb-5'>Nome do anuncio: " . $rows_anun['nome'] . '</div>';
+    // echo "Descrição: " . $rows_anun['descricao'] . "<br>";
+    // echo "ID: " . $rows_anun['ID'] . "<br>";
+    // echo "<a href='workperf.php?id=" . $rows_anun['ID'] . "'>Acessar</a>";
+    // echo "<hr>";
+
+    echo "<div style='border: 5px dashed green; background-color: gray'> ". $rows_anun['ID'] ."
+    <div><h1 style='background-color:white; margin-right:50em'>". $rows_anun['nome'] ."</h1> <h3>". $rows_anun['descricao'] ."</h3></div> 
+    <div><button><a style= role='button'; href='../workperf.php?id=" . $rows_anun['ID'] ."';>Vizualise</a></button></div>
+    </div><br>";
 }
-
-
-?>

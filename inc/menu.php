@@ -62,9 +62,20 @@
     </div>
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
+<<<<<<< HEAD
     <form method="POST" action="inc/teste.php">
       <div style="border: 2px white solid;">pesquisar anúncios</div><br>
       <input type="text" name="pesquisar" placeholder="PESQUISAR">
       <input type="submit" value="ENVIAR">
     </form>
+=======
+    <form method="POST" action="inc/result.php">
+    <p>Pesquisar anuncios</p>
+  <div class="p-4 mx-5" style="border: 5px outset white;">
+
+    <input type="text" name="pesquisar" placeholder="PESQUISAR"><br>
+    <input type="submit" value="ENVIAR">
+  </form>
+</div>
+>>>>>>> f7b3074302986174cbb1e050f59baacb5162c964
   </div>

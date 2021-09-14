@@ -1,11 +1,11 @@
 <?php
 
 include_once("./inc/menu.php");
-$id = $_GET['id'];
+
 
 include_once(dirname(__FILE__) . "./inc/MySQL.php");
 
-$sql = $pdo->prepare('SELECT id, nome, email, img, formacao, profissao, descricao FROM funcionario WHERE id = ' . $id);
+$sql = $pdo->prepare('SELECT id, nome, email, img, formacao, profissao, descricao FROM funcionario WHERE id');
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);

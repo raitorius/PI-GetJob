@@ -63,7 +63,7 @@
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
     <form method="POST" action="inc/teste.php">
-      <div style="border: 2px white dashed;">pesquisar anúncios</div><br>
+      <div style="border: 2px white solid;">pesquisar anúncios</div><br>
       <input type="text" name="pesquisar" placeholder="PESQUISAR">
       <input type="submit" value="ENVIAR">
     </form>

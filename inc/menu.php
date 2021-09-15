@@ -5,7 +5,7 @@
         <nav class="navbar navbar-dark black">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-
+            
           </button>
         </nav>
         <div class="collapse" id="navbarToggleExternalContent" style="position: absolute; z-index: 2020;">
@@ -48,7 +48,7 @@
                     <div class="dropdown-menu">
                       <ul>
                         <li> <a href="cadfuncionario.php">Funcionário</a></li>
-                        <li><a href="cadusuario.php">Usuário</a></li>
+                        <li><a href="cadusuario.php">Usuário</a></li><br>
                       </ul>
                     </div>
                 </div>
@@ -62,20 +62,15 @@
     </div>
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
-<<<<<<< HEAD
-    <form method="POST" action="inc/teste.php">
-      <div style="border: 2px white solid;">pesquisar anúncios</div><br>
-      <input type="text" name="pesquisar" placeholder="PESQUISAR">
-      <input type="submit" value="ENVIAR">
-    </form>
-=======
     <form method="POST" action="inc/result.php">
     <p>Pesquisar anuncios</p>
-  <div class="p-4 mx-5" style="border: 5px outset white;">
+  <div class="p-4 mx-5" style="border: 5px outset black;">
 
-    <input type="text" name="pesquisar" placeholder="PESQUISAR"><br>
+    <input type="text" name="pesquisar" style="border-radius: 4px;" placeholder="PESQUISAR"><br>
     <input type="submit" value="ENVIAR">
   </form>
 </div>
->>>>>>> f7b3074302986174cbb1e050f59baacb5162c964
   </div>
+
+
+  

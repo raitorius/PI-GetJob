@@ -27,7 +27,8 @@ if ($sql->execute()) {
     
     }
 }
-include_once("./inc/header.php");
+include_once(dirname(__FILE__)."/inc/header.php");
+
 ?>
 
 

@@ -2,9 +2,10 @@
 
 include_once(dirname(__FILE__) . "./inc/MySQL.php");
 
-include_once(dirname(__FILE__)."/inc/header.php");
+include_once(dirname(__FILE__) . "/inc/header.php");
 
 include_once(dirname(__FILE__)."/inc/menu.php");
+
 
 if (!isset($_GET['id'])) {
     $id = null;
@@ -14,31 +15,29 @@ if (!isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 
-$sql = $pdo->prepare('SELECT id, img, nome, email, formacao, profissao, telefone, descricao FROM funcionario WHERE id');
+$sql = $pdo->prepare('SELECT id, nome, descricao, exigencias, profissao FROM anuncios WHERE id');
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $values) {
-        $image = $values['img'];
         $nome = $values['nome'];
-        $email = $values['email'];
-        $formacao = $values['formacao'];
-        $profissao = $values['profissao'];
-        $telefone = $values['telefone'];
         $descricao = $values['descricao'];
+        $exigencias = $values['exigencias'];
+        $profissao = $values['profissao'];
+    
     }
 }
-include_once("./inc/header.php");
+include_once(dirname(__FILE__)."/inc/header.php");
+
 ?>
 
 
 <div class="bck container">
-    <p>foto de perfil:</p>
     <div class="col">
         <div class="row">
 
             <?php
-            echo '<img src="data:image/png;base64,' . base64_encode($values['img']) . '" width = "180px" height = "180px"/>';
+          //  echo '<img src="data:image/png;base64,' . base64_encode($values['img']) . '" width = "180px" height = "180px"/>';
             ?>
         </div>
     </div>
@@ -52,26 +51,22 @@ include_once("./inc/header.php");
                     <h2>Nome: <br>
                         <p><?php echo $nome ?></p>
                     </h2>
-                    <h2>Email : <br>
-                        <p><?php echo $email ?></p>
+                    <h2>Descrição: <br>
+                        <p><?php echo $descricao ?></p>
                     </h2>
-                    <h2>formacao: <br>
-                        <p><?php echo $formacao ?></p>
+                    <h2>Exigências: <br>
+                        <p><?php echo $exigencias ?></p>
                     </h2>
                     <h2>profissao: <br>
                         <p><?php echo $profissao ?></p>
+                        <div class="text-right s"><button><a echo style="color:black; font-family:'Courier'; text-decoration: none;background-color:whith; border: 3px outset black" role="button" href="login.php">Contratar</a></button></div>
                     </h2>
-                    <h2>telefone: <br>
-                        <p><?php echo $telefone ?></p>
-                    </h2>
-                    <h2>descricao: <br>
-                        <p><?php echo $descricao ?></p>
-                    </h2>
-                    <div class="text-right s"><button><a echo style="color:black; font-family:'Courier'; text-decoration: none;background-color:whith; border: 3px outset black" role="button" href="login.php">Contratar</a></button></div>
                 </div>
             </div>
         </div>
 </div>
+
+
 <?php
 include_once(dirname(__FILE__) . "./inc/footer.php");
 ?>

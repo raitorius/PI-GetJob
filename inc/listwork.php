@@ -20,11 +20,11 @@ if ($sql->execute()) {
 
             ?>
                 <div class="col col-md-3 p-3 mb-5">
-                    <div class="bg-white p-4 h-100" style="border: 2px solid goldenrod;">
+                    <div class="bg-white p-4 h-100" style="border: 4px solid white; border-radius:10px; box-shadow: 3px 3px 10px black;">
                         <?php echo $nome ?>
                         <img class="img-fluid" src="./assets/img/unload.png">
                         <?php echo $id ?>
-                        <div class="text-center"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset gray" role="button" href="workperf.php?id=<?php echo $values['ID']; ?>">Contratar</a></button></div>
+                        <div class="text-center"><button><a style="color:white; font-family:'Courier'; text-decoration: none;background-color:black; border: 3px solid black; border-radius: 4px 4px; box-shadow: 2px 2px 3px black;" role="button" href="workperf.php?id=<?php echo $values['ID']; ?>">Contratar</a></button></div>
                     </div>
                 </div>
         <?php

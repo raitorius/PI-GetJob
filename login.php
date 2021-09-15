@@ -2,8 +2,9 @@
 
 include_once(dirname(__FILE__) . "../inc/MySQL.php");
 
-include_once("./inc/menu.php");
-include_once("./inc/header.php");
+include_once(dirname(__FILE__)."/inc/menu.php");
+
+include_once(dirname(__FILE__)."/inc/header.php");
 
 $_SESSION['email'] = "";
 

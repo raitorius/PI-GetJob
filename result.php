@@ -47,8 +47,7 @@ while ($rows_anun = mysqli_fetch_array($result_anuncios)) {
 }
 ?>
 <?php
-include_once(dirname(__FILE__)."/inc/footer.php");
+include_once(dirname(__FILE__)."/inc/menu.php");
 
 include_once(dirname(__FILE__)."/inc/down.php");
-
 ?>

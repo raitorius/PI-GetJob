@@ -1,9 +1,11 @@
 <?php
-
+//session_start();
  
 include_once(dirname(__FILE__) . "../inc/MySQL.php");
 
-include_once("./inc/menu.php");
+include_once(dirname(__FILE__)."/inc/menu.php");
+
+//Session Start foi inserida no Header
 include_once("./inc/header.php");
 
 $_SESSION['email'] = "";

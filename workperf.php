@@ -3,9 +3,9 @@ include_once(dirname(__FILE__) . "./inc/MySQL.php");
 
 include_once(dirname(__FILE__) . "/inc/header.php");
 include_once("./inc/menu.php");
-$id = $_GET['id'];
 
-$sql = $pdo->prepare('SELECT id, nome, descricao FROM anuncios WHERE id = ' . $id);
+
+$sql = $pdo->prepare('SELECT id, nome, descricao FROM anuncios WHERE id');
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);

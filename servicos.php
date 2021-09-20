@@ -36,9 +36,16 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
   }
 
-  .img {
-    padding: 20px;
-    height: 4px;
+  .img2 {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius:  35px 15px; 
+    height: 197px;
+    padding-top: 12px;
+    box-shadow: 3.5px 3.5px 10px black ;
+  
+    
   }
 </style>
 

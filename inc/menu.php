@@ -57,10 +57,10 @@
                 <div class="btn-group dropright">
 
 
-                  <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="login.php">Login</a></li>
+                  <li class="my-3type=  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="login.php">Logout</a></li>
                   <div class="dropdown-menu">
                     <ul>
-                    <a href="logout.php">Sair</a>
+                    <a href="/sair.php">Sair</a>
 
                     </ul>
                   </div>
@@ -74,6 +74,7 @@
     <div class="logo"><img class="img-fluid" src="assets/img/logo.png">
     </div>
     <form method="POST" action="inc/result.php">
+<<<<<<< HEAD
       <p>Pesquisar anuncios</p>
       <div class="p-4 mx-5" style="border: 5px outset black;">
 
@@ -83,3 +84,13 @@
   </div>
   <a href="logout.php">Sair</a>
 </div>
+=======
+    <p>Pesquisar anuncios</p>
+  <div class="p-4 mx-5" style="border: 5px outset black;">
+
+    <input type="text" name="pesquisar" style="border-radius: 4px;" placeholder="PESQUISAR"><br>
+    <input type="submit" value="ENVIAR">
+  </form>
+</div>
+  </div>
+>>>>>>> 7e60388ff3cc66f2d7e34c57be96b497bc448730

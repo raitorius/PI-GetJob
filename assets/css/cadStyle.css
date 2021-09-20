@@ -24,7 +24,7 @@ main.container {
     max-width: 400px;
     min-height: 70vh;
     padding: 4rem;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     margin-top: 40px;
     min-width: 50%;
@@ -177,3 +177,12 @@ label {
     width: 4.5px;
     color: rgb(24, 24, 24);
 }
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    border: solid;
+    border-color: black;
+    border-radius: 6px 6px;
+
+  }

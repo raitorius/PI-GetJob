@@ -1,8 +1,8 @@
 <?php
-include_once(dirname(__FILE__) . "./inc/MySQL.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 include_once(dirname(__FILE__) . "/inc/header.php");
-include_once("./inc/menu.php");
+include_once("/inc/menu.php");
 
 
 $sql = $pdo->prepare('SELECT id, nome, descricao FROM anuncios WHERE id');
@@ -33,6 +33,6 @@ if ($sql->execute()) {
 </div>
 
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
-include_once(dirname(__FILE__) . "./inc/down.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/down.php");
 ?>

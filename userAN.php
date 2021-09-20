@@ -1,6 +1,6 @@
 <?php
 
-include_once(dirname(__FILE__) . "./inc/MySQL.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 include_once(dirname(__FILE__) . "/inc/header.php");
 
@@ -68,6 +68,6 @@ include_once(dirname(__FILE__)."/inc/header.php");
 
 
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
 ?>
 </main>

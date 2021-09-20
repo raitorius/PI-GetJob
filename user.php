@@ -1,6 +1,6 @@
 <?php
 
-include_once(dirname(__FILE__) . "./inc/MySQL.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 include_once(dirname(__FILE__)."/inc/header.php");
 
@@ -28,7 +28,7 @@ if ($sql->execute()) {
         $descricao = $values['descricao'];
     }
 }
-include_once("./inc/header.php");
+include_once("/inc/header.php");
 ?>
 
 
@@ -73,6 +73,6 @@ include_once("./inc/header.php");
         </div>
 </div>
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
 ?>
 </main>

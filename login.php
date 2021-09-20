@@ -1,13 +1,10 @@
 <?php
 
-include_once(dirname(__FILE__) . "../inc/MySQL.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 include_once(dirname(__FILE__)."/inc/menu.php");
 
 include_once(dirname(__FILE__)."/inc/header.php");
-
-$_SESSION['email'] = "";
-
 
 $aviso = false;
 if (isset($_POST['enviar'])) {
@@ -33,7 +30,9 @@ if (isset($_POST['enviar'])) {
 
 
 
-
+<?php
+ if (!isset($_SESSION['email'])){
+?>
 <form action="" method="post">
 	<div class="login-wrap">
 		<div class="login-html">
@@ -75,11 +74,17 @@ if (isset($_POST['enviar'])) {
 		</div>
 	</div>
 	<?php
+	 //echo "Bem Vindo1: ". $_SESSION['email'];
 	if ($aviso) {
 		echo $aviso;
 	}
 	?>
 </form>
+<?php
+ } else {
+	 echo "Bem Vindo2: ". $_SESSION['email'];
+ }
+?>
 
 <?php
 

@@ -1,5 +1,5 @@
 <?php
-include_once(dirname(__FILE__)."/inc/MySQL.php");
+// include_once("MySQL.php");
 
 include_once(dirname(__FILE__)."/inc/header.php");
 

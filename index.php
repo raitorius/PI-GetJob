@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__)."/inc/MySQL.php");
 
 include_once(dirname(__FILE__) . "/inc/header.php");
-include_once("./inc/menu.php");
+include_once("/inc/menu.php");
 ?>
 
 
@@ -10,13 +10,13 @@ include_once("./inc/menu.php");
 <?php 
 
 
-include_once(dirname(__FILE__) . "./inc/listwork.php");
+include_once(dirname(__FILE__) . "/inc/listwork.php");
 ?>
 
 </div>
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
-include_once(dirname(__FILE__) . "./inc/down.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/down.php");
 ?>
 
 <style>

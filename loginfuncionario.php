@@ -1,12 +1,7 @@
 <?php
 //session_start();
- 
-include_once(dirname(__FILE__) . "../inc/MySQL.php");
 
-include_once(dirname(__FILE__)."/inc/menu.php");
-
-//Session Start foi inserida no Header
-include_once("./inc/header.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 $_SESSION['email'] = "";
 //$_SESSION['senha'] = "";
@@ -25,11 +20,18 @@ if (isset($_POST['enviar'])) {
 				$_SESSION['senha'] = $values['senha'];
 			}
 			$aviso = '<h6 class="alert alert-primary" style="color: green;">Usuario Logado</h6>';
+			header("location:index.php");
 		} else {
 			$aviso = '<h6 class="alert alert-danger" style="color: red">Este usuario não existe</h6>';
 		}
 	}
 }
+
+include_once("/inc/header.php");
+
+include_once("/inc/menu.php");
+
+
 ?>
 
 <form action="" method="post">
@@ -68,11 +70,11 @@ if (isset($_POST['enviar'])) {
 			</div>
 		</div>
 	</div>
-<?php 
-if($aviso) {
-echo $aviso;
-}
-?>
+	<?php
+	if ($aviso) {
+		echo $aviso;
+	}
+	?>
 </form>
 
 <?php

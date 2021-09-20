@@ -1,9 +1,9 @@
 <?php
 include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
-include_once(dirname(__FILE__) . "./inc/header.php");
+include_once(dirname(__FILE__) . "/inc/header.php");
 
-include_once(dirname(__FILE__) . "./inc/menu.php");
+include_once(dirname(__FILE__) . "/inc/menu.php");
 ?>
 
 
@@ -36,16 +36,9 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
 
   }
 
-  .img2 {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius:  35px 15px; 
-    height: 197px;
-    padding-top: 12px;
-    box-shadow: 3.5px 3.5px 10px black ;
-  
-    
+  .img {
+    padding: 20px;
+    height: 4px;
   }
 </style>
 
@@ -100,6 +93,6 @@ include_once(dirname(__FILE__) . "./inc/menu.php");
   //echo ("Olá O usuário:$ é o usuário número $id. sua descricao é: $descricao");
 
   //echo ("<BR><BR>Nome: $nome<br>E-mail: $email<br> Formação: $formacao<br>Telefone: $telefone<br>Descrição: $descricao<Br>Senha:$senha</a>");
-include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
   ?>
 </div>
